@@ -1,0 +1,24 @@
+"""Program to solve quadratic equation"""
+
+
+# Type equation in form '2x**2 + 9x + 4 = 0'. Your equation must be string
+def solve_quadratic equation(equation, signs=3):  # 'signs' parameter shows how many decimal places will you get
+    lst = equation.split('x')
+    a = float(lst[0])
+    b = float(lst[1].split('+')[1])
+    c = float(lst[2].split('=')[0][3:])
+    disc = b ** 2 - (4 * a * c)
+    # Return False if equation has no roots
+    if disc < 0:
+        return False
+
+    elif disc == 0:
+        x = round(-b / (2 * a), signs)
+        return x
+
+    # If equation has two roots, program will return them in format [x1, x2]
+    else:
+        x1 = round((-b + disc ** 0.5) / (2 * a), signs)
+        x2 = round((-b - disc ** 0.5) / (2 * a), signs)
+        return [x1, x2]
+
