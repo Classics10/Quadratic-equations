@@ -1,7 +1,7 @@
 """Program to solve quadratic equation"""
 
 
-# Type equation in form '2x**2 + 9x + 4 = 0'. Your equation must be string
+# Type equation in form '2x**2 + 9x + 4 = 0'. Your equation must be in string form
 def solve_quadratic equation(equation, signs=3):  # 'signs' parameter shows how many decimal places will you get
     lst = equation.split('x')
     a = float(lst[0])
